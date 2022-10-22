@@ -8,7 +8,10 @@
         </div>
         <div class="description">
             <p>{{ task.description }}</p>
-            <button class="delete_button">
+            <button 
+            class="delete_button"
+            @click="storeTasks.deleteTask(task.id)"
+            >
                 Delete
             </button>
         </div>
@@ -18,6 +21,14 @@
 <script setup>
 
 // IMPORT 
+
+    import { useStoreTasks } from '@/stores/counter'
+
+
+// Props and Constants
+
+
+    const storeTasks = useStoreTasks()
 
     const props = defineProps({
         task: {

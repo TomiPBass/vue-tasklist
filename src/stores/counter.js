@@ -64,5 +64,8 @@ export const useStoreTasks = defineStore("storeTasks", {
 
         this.tasks.push(task)
     },
+    deleteTask(idForDelete) {
+      this.tasks = this.tasks.filter(task => task.id !== idForDelete)
+    }
   }
 })
