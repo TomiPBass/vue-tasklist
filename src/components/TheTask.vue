@@ -30,7 +30,7 @@ import { useStoreTasks } from '@/stores/counter'
 
 const storeTasks = useStoreTasks()
 
-const props = defineProps({
+defineProps({
     task: {
         type: Object,
         required: true
