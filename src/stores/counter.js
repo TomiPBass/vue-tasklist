@@ -1,9 +1,4 @@
 import { defineStore } from "pinia";
-import { createPinia } from 'pinia'
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
-
-const pinia = createPinia()
-pinia.use(piniaPluginPersistedstate)
 
 export const useStoreTasks = defineStore("storeTasks", {
     state: () => {
@@ -13,20 +8,20 @@ export const useStoreTasks = defineStore("storeTasks", {
                     id: "id1",
                     title: "Do a laundry",
                     date: "21st of January",
-                    description: "blahblahblah. Do it!"
+                    description: "blahblahblah. Do it!",
                 },
                 {
                     id: "id2",
                     title: "Go to sleep bitch",
                     date: "2nd of March",
-                    description: "Zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz zzzzzzzzzzzzzzzzzzzzzzzzzz zzzzzzzzzzzzzzzzzzzzz"
-                }
-            ]
-        }
+                    description:
+            "Zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz zzzzzzzzzzzzzzzzzzzzzzzzzz zzzzzzzzzzzzzzzzzzzzz",
+                },
+            ],
+        };
     },
     actions: {
-        addTask({newTitle, newDate, newDesc}) {
-
+        addTask({ newTitle, newDate, newDesc }) {
             // Get the id of the Task
 
             let currentDate = new Date().getTime();
@@ -89,10 +84,11 @@ export const useStoreTasks = defineStore("storeTasks", {
                 description: newDesc,
             };
 
-            this.tasks.push(task)
+            this.tasks.push(task);
         },
         deleteTask(idForDelete) {
-            this.tasks = this.tasks.filter(task => task.id !== idForDelete)
-        }
-    }
-})
+            this.tasks = this.tasks.filter((task) => task.id !== idForDelete);
+        },
+    },
+    persist: true,
+});
