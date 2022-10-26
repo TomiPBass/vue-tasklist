@@ -10,11 +10,16 @@
             <p>{{ task.description }}</p>
             <button 
                 class="delete_button"
-                @click="storeTasks.deleteTask(task.id)"
+                @click="modals.deleteTask = true"
             >
                 Delete
             </button>
         </div>
+        <DeleteTask 
+            v-if="modals.deleteTask"
+            v-model="modals.deleteTask"
+            :task-id="task.id"
+        />
     </div>
 </template>
 
@@ -22,10 +27,12 @@
 
 // IMPORT 
 
+import { reactive } from 'vue'
 import { useStoreTasks } from '@/stores/counter'
+import DeleteTask from '@/components/DeleteTask.vue'
 
 
-// Props and Constants
+// STORE AND PROPS
 
 
 const storeTasks = useStoreTasks()
@@ -35,6 +42,12 @@ defineProps({
         type: Object,
         required: true
     }
+})
+
+// MODALS
+
+const modals = reactive({
+    deleteTask: false
 })
 
 </script>
