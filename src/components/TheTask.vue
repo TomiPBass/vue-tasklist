@@ -1,4 +1,9 @@
 <template>
+    <DeleteTask 
+        v-if="modals.deleteTask"
+        v-model="modals.deleteTask"
+        :task-id="task.id"
+    />
     <div class="task_div">
         <div class="task">
             <p>{{ task.title }}</p>
@@ -15,11 +20,6 @@
                 Delete
             </button>
         </div>
-        <DeleteTask 
-            v-if="modals.deleteTask"
-            v-model="modals.deleteTask"
-            :task-id="task.id"
-        />
     </div>
 </template>
 

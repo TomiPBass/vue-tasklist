@@ -1,31 +1,24 @@
 <template>
-    <div class="modal">
-        <div 
-            class="modal-card"
-        >
-            <div class="modal-card-head">
-                <p class="modal-card-title">
-                    Delete note
-                </p>
-                <button
-                    class="close-modal-button"
-                    @click="closeModal"
-                >
-                    X
+    <div class="modal_bg">
+        <div class="modal_box">
+            <div class="modal_top">
+                <p>Delete Task</p>
+                <button @click="closeModal">
+                    x
                 </button>
             </div>
-            <div class="modal-card-body">
-                <p>Are you sure you want to delete this task?</p>
+            <div class="modal_mid">
+                <p>Are you sure you want to delete your task?</p>
             </div>
-            <div class="modal-card-foot">
-                <button 
-                    class="close-button-modal"
+            <div class="modal_bottom">
+                <button
+                    id="cancel_button"
                     @click="closeModal"
                 >
                     Cancel
                 </button>
-                <button 
-                    class="delete-button-modal"
+                <button
+                    id="delete_button"
                     @click="storeTasks.deleteTask(taskId)"
                 >
                     Delete
