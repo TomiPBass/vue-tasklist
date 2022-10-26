@@ -28,14 +28,11 @@
 // IMPORT 
 
 import { reactive } from 'vue'
-import { useStoreTasks } from '@/stores/counter'
 import DeleteTask from '@/components/DeleteTask.vue'
 
 
 // STORE AND PROPS
 
-
-const storeTasks = useStoreTasks()
 
 defineProps({
     task: {
