@@ -1,6 +1,7 @@
 <template>
     <div>
-        <TaskList />
+        <TheHeader />
+        <RouterView />
     </div>
 </template>
 
@@ -8,9 +9,10 @@
 
 // IMPORTS
 
-import TaskList from '@/views/ViewTaskList.vue'
 import TheHeader from '@/components/TheHeader.vue'
-import TheTaskPlain from '@/components/TheTaskPlain.vue'
-
+import BoxTaskList from '@/views/ViewBoxTaskList.vue'
+import LineTaskList from '@/views/ViewLineTaskList.vue'
 
 </script>
+
+

@@ -1,7 +1,7 @@
 <template>
     <div class="todo_plain">
-        <div class="todo_grid">
-            <TheTask 
+        <div class="todo_line_grid">
+            <TheTaskLine
                 v-for="task in storeTasks.tasks" 
                 :key="task.id" 
                 :task="task"
@@ -10,11 +10,12 @@
     </div>
 </template>
 
+
 <script setup>
 
 // IMPORTS
 
-import TheTask from "@/components/TheTask.vue";
+import TheTaskLine from "@/components/TheTaskLine.vue";
 import { useStoreTasks } from "@/stores/counter";
 
 // CONSTS

@@ -1,17 +1,23 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import ViewTaskList from '@/views/ViewTaskList.vue'
-import ViewEditTask from '@/views/ViewEditTask.vue'
+import ViewBoxTaskList from '@/views/ViewBoxTaskList.vue'
+import ViewLineTaskList from '@/views/ViewLineTaskList.vue'
 
 const routes = [
     {
         path: '/',
         name: 'tasks',
-        component: ViewTaskList
+        component: ViewBoxTaskList
     },
     {
-        path: '/editTask/:id',
-        name: 'edit-task',
-        component: ViewEditTask
+        path: '/line',
+        name: 'line-tasks',
+        component: ViewLineTaskList
     }
-
 ]
+
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes
+})
+
+export default router

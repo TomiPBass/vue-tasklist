@@ -6,16 +6,16 @@ export const useStoreTasks = defineStore("storeTasks", {
             tasks: [
                 {
                     id: "id1",
-                    title: "Do a laundry",
-                    date: "21st of January",
-                    description: "blahblahblah. Do it!",
+                    title: "Karaoke Bar - 21:00",
+                    date: "27th of October",
+                    description: "Gotta have that bass for tomorrow",
                 },
                 {
                     id: "id2",
-                    title: "Go to sleep bitch",
-                    date: "2nd of March",
+                    title: "Shot-C Concert",
+                    date: "28th of October",
                     description:
-            "Zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz zzzzzzzzzzzzzzzzzzzzzzzzzz zzzzzzzzzzzzzzzzzzzzz",
+                    "Tišnov Plesá 2022, soundcheck at 17:00, concert at 23:00",
                 },
             ],
         };

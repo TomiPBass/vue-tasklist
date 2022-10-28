@@ -36,6 +36,20 @@
             ADD TASK
         </button>
     </div>
+    <div class="switch_buttons">
+        <RouterLink 
+            class="tasks-button"
+            to="/"
+        >
+            Box
+        </RouterLink>
+        <RouterLink 
+            class="tasks-button"
+            to="/line"
+        >
+            Line
+        </RouterLink>
+    </div>
 </template>
 
 <script setup>
@@ -60,4 +74,35 @@ const addTask = () => {
 }
 
 
+
 </script>
+
+<style>
+.switch_buttons {
+    height: auto;
+    margin: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.tasks-button{
+    font-size: 30px;
+    margin: 0 20px;
+    padding: 3px 10px;
+    color: rgb(202, 202, 202);
+    border: 2px solid rgb(202, 202, 202);
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.tasks-button:hover{
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(202, 202, 202, 0.3);
+    border-bottom: none;
+    background-color: rgba(214, 214, 214, 0.712);
+}
+
+</style>
+
