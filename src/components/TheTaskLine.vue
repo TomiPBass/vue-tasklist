@@ -1,15 +1,15 @@
 <template>
-    <DeleteTask 
+    <ConfirmDelete
         v-if="modals.deleteTask"
-        v-model="modals.deleteTask"
-        :task-id="task.id"
+        :task-id="displayedTask.id"
+        @close="modals.deleteTask = false"
     />
     <div class="taskLine_div">
         <div class="taskLine">
-            <p>{{ task.title }}</p>
+            <p>{{ displayedTask.title }}</p>
         </div>
         <div class="taskLine_date">
-            <p>{{ task.date }}</p>
+            <p>{{ displayedTask.date }}</p>
         </div>
         <button 
             class="taskLine_delete_button"
@@ -23,25 +23,19 @@
 <script setup>
 
 // IMPORT 
-
 import { reactive } from 'vue'
-import DeleteTask from '@/components/DeleteTask.vue'
-
+import ConfirmDelete from '@/components/ConfirmDelete.vue'
 
 // STORE AND PROPS
-
-
 defineProps({
-    task: {
+    displayedTask: {
         type: Object,
         required: true
     }
 })
 
 // MODALS
-
 const modals = reactive({
     deleteTask: false
 })
-
 </script>
