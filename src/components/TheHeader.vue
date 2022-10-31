@@ -3,7 +3,7 @@
         <div class="header">
             <div class="top_row">
                 <div class="task_form">
-                    <label for="submit_taskForm">Submit Task:</label>
+                    <label for="submit_taskForm">Submit Event:</label>
                     <input 
                         id="taskForm"
                         v-model="newTask.newTitle" 
@@ -37,7 +37,7 @@
         <ButtonPrimary 
             @click="addTask()"
         >
-            ADD TASK
+            ADD EVENT
         </ButtonPrimary>
     </div>
     <div class="switch_buttons">

@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 id="website_title">
-            TOMI'S Universal TaskList
+            TOMI'S Universal EventList
         </h1>
         <TheHeader />
         <RouterView />
