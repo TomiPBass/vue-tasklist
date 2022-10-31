@@ -1,36 +1,38 @@
 <template>
-    <div class="header">
-        <div class="top_row">
-            <div class="task_form">
-                <label for="submit_taskForm">Submit Task:</label>
-                <input 
-                    id="taskForm"
-                    v-model="newTask.newTitle" 
-                    type="text" 
-                    name="taskForm" 
-                >
+    <div class="header_plain">
+        <div class="header">
+            <div class="top_row">
+                <div class="task_form">
+                    <label for="submit_taskForm">Submit Task:</label>
+                    <input 
+                        id="taskForm"
+                        v-model="newTask.newTitle" 
+                        type="text" 
+                        name="taskForm" 
+                    >
+                </div>
+                <div class="date_form">
+                    <label for="submit_dateForm">Submit Date:</label>
+                    <input 
+                        id="dateForm"
+                        v-model="newTask.newDate" 
+                        type="date" 
+                        name="dateForm" 
+                    >
+                </div>
             </div>
-            <div class="date_form">
-                <label for="submit_dateForm">Submit Date:</label>
-                <input 
-                    id="dateForm"
-                    v-model="newTask.newDate" 
-                    type="date" 
-                    name="dateForm" 
-                >
-            </div>
-        </div>
         
-        <div class="desc_form">
-            <label for="submit_descriptionForm">Submit Description:</label>
-            <textarea
-                id="descriptionForm"
-                v-model="newTask.newDesc" 
-                cols="20"
-                rows="4"
-            />
+            <div class="desc_form">
+                <label for="submit_descriptionForm">Submit Description:</label>
+                <textarea
+                    id="descriptionForm"
+                    v-model="newTask.newDesc" 
+                    cols="20"
+                    rows="4"
+                />
+            </div>
         </div>
-    </div>
+    </div>     
     <div class="add_task">
         <ButtonPrimary 
             @click="addTask()"
@@ -85,13 +87,15 @@ const layout = reactive({
 </script>
 
 <style>
+.header_plain{
+    display: flex;
+    justify-content: center;
+}
 .header{
   display: grid;
+  min-width: 1060px;
   grid-template-rows: 1fr 3fr;
-  margin-top: 100px;
   background-color: white;
-  margin-left: 100px;
-  margin-right: 100px;
   padding: 40px 0;
   border: 3px solid rgb(187, 187, 187);
   border-radius: 50px;

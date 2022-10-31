@@ -1,5 +1,8 @@
 <template>
     <div>
+        <h1 id="website_title">
+            TOMI'S Universal TaskList
+        </h1>
         <TheHeader />
         <RouterView />
     </div>
@@ -15,6 +18,17 @@ import TheHeader from '@/components/TheHeader.vue'
 </script>
 
 <style>
+#website_title{
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  margin: 15px 0;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+
+}
+
 .task_plain{
   background-color: aliceblue;
   margin: 0 100px;
