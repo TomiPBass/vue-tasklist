@@ -22,7 +22,7 @@
                 <textarea
                     v-model="task.description"
                     cols="30"
-                    rows="5"
+                    rows="4"
                 />
             </div>
             <div class="edit_modal_bottom">
@@ -102,19 +102,28 @@ const saveClicked = () => {
 </script>
 
 <style>
-.modal_box {
-  background-color: white;
-  height: 20%;
-  width: 33%;
-  z-index: 2;
-  display: grid;
-  grid-template-rows: 2fr 2fr 1.3fr;
+.edit_modal_bg{
   position: absolute;
-  left: 33%;
-  top: 40%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.edit_modal_box {
+  background-color: white;
+  height: auto;
+  width: 40%;
+  display: grid;
+  grid-template-rows: .7fr 3fr .5fr;
+  position: absolute;
+  left: 30%;
+  top: 30%;
 }
 
-.modal_top {
+.edit_modal_top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,7 +132,7 @@ const saveClicked = () => {
   background-color: aquamarine;
 }
 
-.modal_top button{
+.edit_modal_top button{
   position: absolute;
   top: 0;
   right: 0;
@@ -137,19 +146,33 @@ const saveClicked = () => {
   cursor: pointer;
 }
 
-.modal_top p{
-  margin: 0
+.edit_modal_top p{
+  margin: 10px
 }
 
-.modal_mid {
+.edit_modal_mid {
   text-align: center;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 2fr 1fr 4fr;
   align-items: center;
   font-size: 20px;
+  padding: 5px 80px;
 }
 
-.modal_bottom {
+.edit_modal_mid input{
+  text-align: center;
+  font-size: 15px;
+  height: 25px;
+  font-family: Montserrat;
+}
+
+.edit_modal_mid textarea{
+  text-align: center;
+  font-size: 15px;
+  font-family: Montserrat;
+}
+
+.edit_modal_bottom {
   background-color: rgb(219, 230, 226);
   display: flex;
   justify-content: center;
@@ -194,4 +217,14 @@ const saveClicked = () => {
   border: 1px solid gray;
   cursor: pointer;
 }
+
+
+@media (max-width: 867px){
+  .edit_modal_box {
+  width: 100%;
+  left: 0;
+  top: 30%;
+  }
+}
+
 </style>

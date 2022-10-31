@@ -50,44 +50,7 @@ body{
   .header{
       padding: 30px 0;
   }
-  
-  .task_form{
-      justify-content: center;
-      font-size: 25px;
-      display: block;
-  }
-  #taskForm{
-      width: 300px;
-      height: 30px;
-      margin-left: 0;
-      font-size: 20px;
-  }
-  
-  .date_form{
-      font-size: 25px;
-      justify-content: center;
-      display: block;
-  }
-  
-  #dateForm{
-      width: 200px;
-      height: 30px;
-      margin-left: 0;
-      font-size: 20px;
-  }
-  
-  .desc_form{
-      font-size: 25px;
-      display: block;
-      justify-content: center;
-  }
-  
-  #descriptionForm{
-      width: 300px;
-      height: 30px;
-      margin-left: 0;
-      font-size: 20px;
-  }
+
   .taskLine_div{
     grid-template-columns: 1fr 1fr 1fr;
  }
@@ -110,6 +73,7 @@ body{
     .header{
         display: block;
         margin-top: 100px;
+        width: 100%;
         background-color: white;
         margin-left: 0;
         margin-right: 0;
@@ -175,14 +139,14 @@ body{
     
     /* Todo GRID */
     
-    .todo_plain{
+    .task_plain{
         margin: 0 0;
         border: 0;
         border-top: 3px solid rgb(187, 187, 187);
         border-bottom: 3px solid rgb(187, 187, 187);
         border-radius: 0;
     }
-    .todo_grid{
+    .task_grid{
         margin: 30px 0;
         display: grid;
         grid-template-columns: 1fr;
@@ -207,6 +171,7 @@ body{
 }
 
 
+
 @media (max-width: 780px) {
   .modal_box {
     background-color: white;
@@ -227,3 +192,31 @@ body{
     font-size: 15px;
   }
 }
+
+@media (max-width: 1028px){
+  .date_form{
+    font-size: 17px;
+  }
+  .task_form{
+    font-size: 17px;
+  }
+  #taskForm{
+    min-width: 200px;
+  }
+  #dateForm{
+    min-width: 200px;
+  }
+  #descriptionForm{
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 787px){
+  #descriptionForm {
+    min-width: 200px;
+}
+}
+
+
+
+

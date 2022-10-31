@@ -44,7 +44,7 @@
 <script setup>
 
 // IMPORT 
-import { computed, reactive, ref } from 'vue'
+import { computed, reactive } from 'vue'
 import { useStoreTasks } from '@/stores/counter'
 import ConfirmDelete from '@/components/ConfirmDelete.vue'
 import ConfirmEdit from '@/components/ConfirmEdit.vue'

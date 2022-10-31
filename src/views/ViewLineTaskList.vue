@@ -4,7 +4,9 @@
             <TheTaskLine
                 v-for="task in storeTasks.tasks" 
                 :key="task.id" 
+                :task="task"
                 :displayed-task="task"
+                :task-id="task.id"
             />
         </div>
     </div>
@@ -51,7 +53,8 @@ const storeTasks = useStoreTasks();
 .taskLine_delete_button {
   position: absolute;
   width: 20%;
-  min-width: 60px;
+  min-width: 30px;
+  max-width: 200px;
   top: 10px;
   bottom: 10px;
   right: 10px;
@@ -60,6 +63,24 @@ const storeTasks = useStoreTasks();
   font-weight: 600;
   letter-spacing: 1px;
   background-color: rgb(202, 37, 15);
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.taskLine_edit_button {
+  position: absolute;
+  width: 20%;
+  min-width: 30px;
+  max-width: 200px;
+  top: 10px;
+  bottom: 10px;
+  right: 15%;
+  color: white;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: rgb(15, 189, 202);
   border: 1px solid gray;
   border-radius: 5px;
   cursor: pointer;
@@ -92,6 +113,35 @@ const storeTasks = useStoreTasks();
 .taskLine_date p{
   font-size: 20px;
   margin: 15px
+}
+
+@media (max-width: 1650px){
+  .taskLine_delete_button{
+    max-width: 140px
+  }
+  .taskLine_edit_button {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 1090px){
+  .taskLine_delete_button{
+    max-width: 150px
+  }
+  .taskLine_edit_button {
+    max-width: 150px;
+    right: 18%
+  }
+}
+
+@media (max-width: 900px){
+  .taskLine_delete_button{
+    max-width: 70px
+  }
+  .taskLine_edit_button {
+    max-width: 70px;
+    right: 15%
+  }
 }
 
 </style>

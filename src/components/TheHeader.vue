@@ -1,31 +1,34 @@
 <template>
     <div class="header">
-        <div class="task_form">
-            <label for="submit_taskForm">Submit Task:</label>
-            <input 
-                id="taskForm"
-                v-model="newTask.newTitle" 
-                type="text" 
-                name="taskForm" 
-            >
+        <div class="top_row">
+            <div class="task_form">
+                <label for="submit_taskForm">Submit Task:</label>
+                <input 
+                    id="taskForm"
+                    v-model="newTask.newTitle" 
+                    type="text" 
+                    name="taskForm" 
+                >
+            </div>
+            <div class="date_form">
+                <label for="submit_dateForm">Submit Date:</label>
+                <input 
+                    id="dateForm"
+                    v-model="newTask.newDate" 
+                    type="date" 
+                    name="dateForm" 
+                >
+            </div>
         </div>
-        <div class="date_form">
-            <label for="submit_dateForm">Submit Date:</label>
-            <input 
-                id="dateForm"
-                v-model="newTask.newDate" 
-                type="date" 
-                name="dateForm" 
-            >
-        </div>
+        
         <div class="desc_form">
             <label for="submit_descriptionForm">Submit Description:</label>
-            <input 
+            <textarea
                 id="descriptionForm"
                 v-model="newTask.newDesc" 
-                type="text" 
-                name="descriptionForm" 
-            >
+                cols="20"
+                rows="4"
+            />
         </div>
     </div>
     <div class="add_task">
@@ -83,8 +86,8 @@ const layout = reactive({
 
 <style>
 .header{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
   margin-top: 100px;
   background-color: white;
   margin-left: 100px;
@@ -92,6 +95,10 @@ const layout = reactive({
   padding: 40px 0;
   border: 3px solid rgb(187, 187, 187);
   border-radius: 50px;
+}
+.top_row{
+    display: flex;
+    justify-content: center;
 }
 
 .task_form{
@@ -101,7 +108,8 @@ const layout = reactive({
   display: flex;
 }
 #taskForm{
-  width: 300px;
+  min-width: 300px;
+  min-height: 25px; 
   margin-left: 10px;
   border: 1px solid rgb(119, 119, 119);
   border-radius: 30px;
@@ -113,11 +121,13 @@ const layout = reactive({
 .date_form{
   font-size: 25px;
   font-weight: 500;
+  margin-left: 30px;
   display: flex;
 }
 
 #dateForm{
-  width: 200px;
+  min-width: 300px;
+  min-height: 25px; 
   margin-left: 10px;
   border: 1px solid rgb(119, 119, 119);
   border-radius: 30px;
@@ -130,15 +140,22 @@ const layout = reactive({
   font-size: 25px;
   font-weight: 500;
   display: flex;
-  margin-right: 50px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+label{
+    display: flex;
+    align-items: center;
 }
 
 #descriptionForm{
-  width: 300px;
+  min-width: 500px;
+  max-height: 50px;
   margin-left: 10px;
   border: 1px solid rgb(119, 119, 119);
   border-radius: 30px;
-  padding: 0 10px;
+  padding: 12px 10px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -177,5 +194,19 @@ const layout = reactive({
     background-color: rgba(214, 214, 214, 0.712);
 }
 
-</style>
 
+
+@media (max-width: 787px){
+    .top_row{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .desc_form label{
+        font-size: 16px; 
+    }
+    #descriptionForm {
+        min-width: 200px;
+    }
+}
+
+</style>
