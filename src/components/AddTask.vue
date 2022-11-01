@@ -46,17 +46,13 @@
     <div class="switch_buttons">
         <RouterLink 
             class="tasks-button"
-            :class="{ active: layout.isActive === 'box'}"
             to="/"
-            @click="layout.isActive = 'box'"
         >
             Box
         </RouterLink>
         <RouterLink 
             class="tasks-button"
-            :class="{ active: layout.isActive === 'line'}"
             to="/line"
-            @click="layout.isActive = 'line'"
         >
             Line
         </RouterLink>
@@ -192,7 +188,7 @@ label{
     cursor: pointer;
 }
 
-.active{
+.router-link-active{
     color: rgb(0, 0, 0);
     border: 2px solid rgb(202, 202, 202, 0.3);
     border-bottom: none;
