@@ -20,6 +20,17 @@
   box-shadow: 2px 0px 20px rgb(202, 202, 202);
 }
 
+.add_task_button:disabled{
+  font-size: 40px;
+  padding: 10px 200px;
+  border: 2px solid rgb(136, 136, 136);
+  border-radius: 30px;
+  color: black;
+  box-shadow: 2px 0px 20px rgb(202, 202, 202);
+  background-color: #acacac;
+}
+
+
 .add_task_button:hover{
   color: black;
   border: 2px solid rgb(255, 255, 255);

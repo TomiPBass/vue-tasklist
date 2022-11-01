@@ -3,16 +3,17 @@
         <div class="header">
             <div class="top_row">
                 <div class="task_form">
-                    <label for="submit_taskForm">Submit Event:</label>
+                    <label for="submit_taskForm">* Submit Event:</label>
                     <input 
                         id="taskForm"
                         v-model="newTask.newTitle" 
+                        placeholder="Submit your event here"
                         type="text" 
                         name="taskForm" 
                     >
                 </div>
                 <div class="date_form">
-                    <label for="submit_dateForm">Submit Date:</label>
+                    <label for="submit_dateForm">* Submit Date:</label>
                     <input 
                         id="dateForm"
                         v-model="newTask.newDate" 
@@ -26,7 +27,8 @@
                 <label for="submit_descriptionForm">Submit Description:</label>
                 <textarea
                     id="descriptionForm"
-                    v-model="newTask.newDesc" 
+                    v-model="newTask.newDesc"
+                    placeholder="Submit your description here" 
                     cols="20"
                     rows="4"
                 />
@@ -35,6 +37,7 @@
     </div>     
     <div class="add_task">
         <ButtonPrimary 
+            :disabled="!newTask.newTitle || !newTask.newDate"
             @click="addTask(), sortTasks()"
         >
             ADD EVENT
