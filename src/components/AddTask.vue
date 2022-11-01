@@ -83,10 +83,6 @@ const sortTasks = () => {
     storeTasks.sortTasks()
 }
 
-const layout = reactive({
-    isActive: "box"
-})
-
 // Onclick Active
 
 </script>
@@ -204,6 +200,104 @@ label{
 }
 
 
+@media (max-width: 1820px){
+  .task_form{
+      margin-left: 30px;
+      font-size: 20px;
+  }
+  .date_form{
+      font-size: 20px;
+  }
+  .desc_form{
+      font-size: 20px;
+      margin-right: 30px;
+  }
+  .header{
+      padding: 20px 0;
+  }
+  #taskForm{
+      width: 200px;
+      font-size: 15px;
+  }
+  #dateForm{
+      width: 200px;
+      font-size: 15px;
+  }
+  #descriptionForm{
+      width: 200px;
+  }
+}
+
+@media (max-width: 1460px){
+  .header{
+      padding: 30px 0;
+  }
+}
+
+@media (max-width: 1280px){
+    .header{
+        display: block;
+        margin-top: 100px;
+        width: 100%;
+        max-width: 1280px;
+        background-color: white;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 30px 0;
+        border: 0;
+        border-top: 3px solid rgb(187, 187, 187);
+        border-bottom: 3px solid rgb(187, 187, 187);
+        border-radius: 0;
+    }
+    
+    .task_form{
+        margin-left: 50px;
+        margin-top: 10px;
+        display: flex;
+    }
+    #taskForm{
+        width: 50%;
+        margin-left: 10px;
+    }
+    
+    .date_form{
+        margin-left: 50px;
+        margin-top: 10px;
+        display: flex;
+    }
+    
+    #dateForm{
+        width: 50%;
+        margin-left: 10px;
+    }
+    
+    .desc_form{
+        margin-left: 50px;
+        display: flex;
+        margin-top: 10px;
+    }
+    
+    #descriptionForm{
+        width: 40%;
+        margin-left: 10px;
+    }
+
+    /* Button */
+    
+    .add_task{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+    .add_task_button{
+        width: 100%;
+        border: 0;
+        border-top: 2px solid rgb(136, 136, 136);
+        border-bottom: 2px solid rgb(136, 136, 136);
+        border-radius: 0;
+    }
+}
 
 @media (max-width: 787px){
     .top_row{
