@@ -3,7 +3,7 @@
         <h1 id="website_title">
             TOMI'S Universal EventList
         </h1>
-        <TheHeader />
+        <AddTask />
         <RouterView />
     </div>
 </template>
@@ -12,7 +12,7 @@
 
 // IMPORTS
 
-import TheHeader from '@/components/TheHeader.vue'
+import AddTask from '@/components/AddTask.vue'
 
 
 </script>

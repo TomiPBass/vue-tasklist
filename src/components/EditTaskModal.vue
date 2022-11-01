@@ -95,6 +95,7 @@ task.value.description = storeTasks.getTaskDesc(props.taskId)
 // Save
 const saveClicked = () => {
     storeTasks.updateTask(props.taskId, task.value)
+    storeTasks.sortTasks()
     emit('close')
 }
 

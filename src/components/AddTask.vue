@@ -35,7 +35,7 @@
     </div>     
     <div class="add_task">
         <ButtonPrimary 
-            @click="addTask()"
+            @click="addTask(), sortTasks()"
         >
             ADD EVENT
         </ButtonPrimary>
@@ -73,9 +73,15 @@ const newTask = ref({
     newDate: "", 
     newDesc: ""
 })
+
+
 const storeTasks = useStoreTasks()
 const addTask = () => {
     storeTasks.addTask(newTask.value)
+}
+
+const sortTasks = () => {
+    storeTasks.sortTasks()
 }
 
 const layout = reactive({

@@ -6,16 +6,16 @@ export const useStoreTasks = defineStore("storeTasks", {
             tasks: [
                 {
                     id: "id1",
-                    title: "Karaoke Bar - 21:00",
-                    date: "27th of October",
-                    description: "Gotta have that bass for tomorrow",
+                    title: "Your First Task",
+                    date: 2022-11-1,
+                    description: "Your First Description",
                 },
                 {
                     id: "id2",
-                    title: "Shot-C Concert",
-                    date: "28th of October",
+                    title: "Your Second Task",
+                    date: 2022-11-2,
                     description:
-                    "Tišnov Plesá 2022, soundcheck at 17:00, concert at 23:00",
+                    "Your Second Description",
                 },
             ],
         };
@@ -48,7 +48,11 @@ export const useStoreTasks = defineStore("storeTasks", {
         updateTask(id, {title, date, description}) {
             let index = this.tasks.findIndex(task => task.id === id)
             this.tasks[index] = {id, title, date, description}
-
+        },
+        sortTasks() {
+            this.tasks = this.tasks.sort((a,b) => {
+                return new Date(a.date) - new Date(b.date)
+            })
         }
     },
     getters: {
