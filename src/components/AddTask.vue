@@ -118,6 +118,7 @@ const sortTasks = () => {
   font-size: 25px;
   font-weight: 500;
   margin-left: 30px;
+  margin-right: 30px;
   display: flex;
 }
 #dateForm{
