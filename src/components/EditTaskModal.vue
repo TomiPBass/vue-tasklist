@@ -44,14 +44,11 @@
 </template>
 
 <script setup>
-
-// IMPORTS
 import { useStoreTasks } from '@/stores/counter'
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-
 
 // Props & Emits
 const props = defineProps({  
@@ -63,7 +60,9 @@ const props = defineProps({
         type: Boolean,
     }
 })
-// HOOKA CHAKA HOOKA HOOKA
+const emit = defineEmits(['close'])
+
+// LIFE CYCLE HOOKS
 onMounted(() => {
     router.push({query:{title:task.value.title}})
 })
@@ -71,18 +70,12 @@ onUnmounted(() => {
     router.push({query:{}})
 })
 
-// EMITS
-const emit = defineEmits(['close'])
-
-// ROUTE
-
 // REFS
 const task = ref({
     title: '',
     date: '',
     description: ''
 })
-
 
 // STORE
 const storeTasks = useStoreTasks()
@@ -98,8 +91,6 @@ const saveClicked = () => {
     storeTasks.sortTasks()
     emit('close')
 }
-
-
 </script>
 
 <style>
@@ -123,7 +114,6 @@ const saveClicked = () => {
   left: 30%;
   top: 30%;
 }
-
 .edit_modal_top {
   display: flex;
   justify-content: center;
@@ -132,7 +122,6 @@ const saveClicked = () => {
   font-weight: bold;
   background-color: aquamarine;
 }
-
 .edit_modal_top button{
   position: absolute;
   top: 0;
@@ -146,11 +135,9 @@ const saveClicked = () => {
   border-left: .5px solid rgb(0, 0, 0);
   cursor: pointer;
 }
-
 .edit_modal_top p{
   margin: 10px
 }
-
 .edit_modal_mid {
   text-align: center;
   display: grid;
@@ -159,27 +146,23 @@ const saveClicked = () => {
   font-size: 20px;
   padding: 5px 80px;
 }
-
 .edit_modal_mid input{
   text-align: center;
   font-size: 15px;
   height: 25px;
   font-family: Montserrat;
 }
-
 .edit_modal_mid textarea{
   text-align: center;
   font-size: 15px;
   font-family: Montserrat;
 }
-
 .edit_modal_bottom {
   background-color: rgb(219, 230, 226);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 #cancel_button {
   border: 1px solid;
   position: absolute;
@@ -190,9 +173,7 @@ const saveClicked = () => {
   background-color: rgb(187, 187, 187);
   border: 1px solid gray;
   cursor: pointer;
-
 }
-
 #delete_button {
   border: 1px solid;
   position: absolute;
@@ -205,7 +186,6 @@ const saveClicked = () => {
   border: 1px solid gray;
   cursor: pointer;
 }
-
 #edit_button {
   border: 1px solid;
   position: absolute;
@@ -218,8 +198,6 @@ const saveClicked = () => {
   border: 1px solid gray;
   cursor: pointer;
 }
-
-
 @media (max-width: 867px){
   .edit_modal_box {
   width: 100%;

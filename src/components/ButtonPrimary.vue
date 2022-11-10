@@ -10,7 +10,6 @@
   justify-content: center;
   margin-top: 30px;
 }
-
 .add_task_button{
   font-size: 40px;
   padding: 10px 200px;
@@ -19,7 +18,6 @@
   color: black;
   box-shadow: 2px 0px 20px rgb(202, 202, 202);
 }
-
 .add_task_button:disabled{
   font-size: 40px;
   padding: 10px 200px;
@@ -29,14 +27,11 @@
   box-shadow: 2px 0px 20px rgb(202, 202, 202);
   background-color: #acacac;
 }
-
-
 .add_task_button:hover{
   color: black;
   border: 2px solid rgb(255, 255, 255);
   background-color: rgb(182, 182, 182);
 }
-
 .add_task_button:active{
   color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);

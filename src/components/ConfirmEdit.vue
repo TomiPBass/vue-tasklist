@@ -14,7 +14,6 @@
 </template>
 
 <script setup>
-// IMPORTS
 import { useStoreTasks } from '@/stores/counter'
 import ConfirmModal from '@/components/ConfirmModal.vue'
 
@@ -25,14 +24,10 @@ defineProps({
         required: true
     }
 })
-
 defineEmits(['close', 'edit'])
 
 // Store
 const storeTasks = useStoreTasks()
-
-// Modals
-
 </script>
 
 <style>
@@ -43,14 +38,12 @@ const storeTasks = useStoreTasks()
   align-items: center;
   font-size: 20px;
 }
-
 .modal_bottom {
   background-color: rgb(219, 230, 226);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 #cancel_button {
   border: 1px solid;
   position: absolute;
@@ -61,9 +54,7 @@ const storeTasks = useStoreTasks()
   background-color: rgb(187, 187, 187);
   border: 1px solid gray;
   cursor: pointer;
-
 }
-
 #delete_button {
   border: 1px solid;
   position: absolute;
@@ -76,7 +67,6 @@ const storeTasks = useStoreTasks()
   border: 1px solid gray;
   cursor: pointer;
 }
-
 #edit_button {
   border: 1px solid;
   position: absolute;

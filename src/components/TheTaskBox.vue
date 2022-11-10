@@ -42,15 +42,12 @@
 </template>
 
 <script setup>
-
 // IMPORT 
 import { computed, reactive } from 'vue'
 import { useStoreTasks } from '@/stores/counter'
 import ConfirmDelete from '@/components/ConfirmDelete.vue'
 import ConfirmEdit from '@/components/ConfirmEdit.vue'
 import EditTaskModal from '@/components/EditTaskModal.vue'
-
-
 
 // STORE AND PROPS
 const storeTasks = useStoreTasks()
@@ -69,7 +66,6 @@ const props = defineProps({
 // Formated date
 const date = computed(() => storeTasks.getTaskDateFormated(props.taskId))
 
-
 // MODALS
 const modals = reactive({
     confirmDelete: false,
@@ -77,13 +73,9 @@ const modals = reactive({
     editTask: false,
 })
 
-
-
 // OPEN EDIT
 const openEdit = () => {
     modals.confirmEdit = false 
     modals.editTask = true 
 }
-
-
 </script>

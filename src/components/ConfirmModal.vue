@@ -24,7 +24,6 @@
 </template>
 
 <script setup>
-// IMPORTS
 import { onMounted, onUnmounted } from 'vue';
 
 // Props & Emits
@@ -37,7 +36,6 @@ defineProps({
         type: String, 
         required: true
     },
-
 })
 const emit = defineEmits(['close'])
 
@@ -70,7 +68,6 @@ onUnmounted(() => {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
-
 .modal_box {
   background-color: white;
   height: 20%;
@@ -81,7 +78,6 @@ onUnmounted(() => {
   left: 33%;
   top: 40%;
 }
-
 .modal_top {
   display: flex;
   justify-content: center;
@@ -90,7 +86,6 @@ onUnmounted(() => {
   font-weight: bold;
   background-color: aquamarine;
 }
-
 .modal_top button{
   position: absolute;
   top: 0;
@@ -104,7 +99,6 @@ onUnmounted(() => {
   border-left: .5px solid rgb(0, 0, 0);
   cursor: pointer;
 }
-
 .modal_top p{
   margin: 0
 }

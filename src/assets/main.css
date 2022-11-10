@@ -7,7 +7,6 @@ body{
   height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
-
 @media (max-width: 1820px){
   .task_form{
       margin-left: 30px;
@@ -38,7 +37,6 @@ body{
     grid-template-columns: 1fr 1fr 2fr;
   }
 }
-
 @media (max-width: 1675px){
 
   .todo_grid{
@@ -47,7 +45,6 @@ body{
     grid-template-columns: 1fr 1fr 1fr; 
   }
 }
-
 @media (max-width: 1460px){
   .header{
       padding: 30px 0;
@@ -57,7 +54,6 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
  }
 }
-
 @media (max-width: 1397px){
 
   .todo_grid{
@@ -66,8 +62,6 @@ body{
     grid-template-columns: 1fr 1fr 1fr; 
   }
 }
-
-
 @media (max-width: 1280px){
     body{
         margin: 0;
@@ -86,7 +80,6 @@ body{
         border-bottom: 3px solid rgb(187, 187, 187);
         border-radius: 0;
     }
-    
     .task_form{
         margin-left: 50px;
         margin-top: 10px;
@@ -96,40 +89,30 @@ body{
         width: 50%;
         margin-left: 10px;
     }
-    
     .date_form{
         margin-left: 50px;
         margin-top: 10px;
         display: flex;
     }
-    
     #dateForm{
         width: 50%;
         margin-left: 10px;
     }
-    
     .desc_form{
         margin-left: 50px;
         display: flex;
         margin-top: 10px;
     }
-    
     #descriptionForm{
         width: 40%;
         margin-left: 10px;
     }
-    
-    
-    
-    
     /* Button */
-    
     .add_task{
         display: flex;
         justify-content: center;
         margin-top: 30px;
     }
-    
     .add_task_button{
         width: 100%;
         border: 0;
@@ -137,11 +120,7 @@ body{
         border-bottom: 2px solid rgb(136, 136, 136);
         border-radius: 0;
     }
-    
-    
-    
     /* Todo GRID */
-    
     .task_plain{
         margin: 0 0;
         border: 0;
@@ -154,8 +133,6 @@ body{
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 30px;
-
-        
     }
     .task_div{
       width: 100%;
@@ -166,15 +143,11 @@ body{
       border-bottom: 3px solid rgb(187, 187, 187);
       border-radius: 0;
     }
-
     .delete_button {
       bottom: 10px;
       right: 30px;
     }
 }
-
-
-
 @media (max-width: 780px) {
   .modal_box {
     background-color: white;
@@ -189,13 +162,10 @@ body{
   .taskLine p{
     font-size: 20px;
   }
-  
-  
   .taskLine_date p{
     font-size: 15px;
   }
 }
-
 @media (max-width: 1028px){
   .date_form{
     font-size: 17px;
@@ -213,13 +183,8 @@ body{
     min-width: 300px;
   }
 }
-
 @media (max-width: 787px){
   #descriptionForm {
     min-width: 200px;
+  }
 }
-}
-
-
-
-

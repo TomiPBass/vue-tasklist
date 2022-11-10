@@ -60,7 +60,6 @@
 </template>
 
 <script setup>
-
 // IMPORTS
 import { ref } from 'vue'
 import { useStoreTasks } from "@/stores/counter"
@@ -72,19 +71,13 @@ const newTask = ref({
     newDate: "", 
     newDesc: ""
 })
-
-
 const storeTasks = useStoreTasks()
 const addTask = () => {
     storeTasks.addTask(newTask.value)
 }
-
 const sortTasks = () => {
     storeTasks.sortTasks()
 }
-
-// Onclick Active
-
 </script>
 
 <style>
@@ -105,7 +98,6 @@ const sortTasks = () => {
     display: flex;
     justify-content: center;
 }
-
 .task_form{
   margin-left: 50px;
   font-size: 25px;
@@ -122,14 +114,12 @@ const sortTasks = () => {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
 }
-
 .date_form{
   font-size: 25px;
   font-weight: 500;
   margin-left: 30px;
   display: flex;
 }
-
 #dateForm{
   min-width: 300px;
   min-height: 25px; 
@@ -140,7 +130,6 @@ const sortTasks = () => {
   padding: 0 10px;
   font-size: 20px;
 }
-
 .desc_form{
   font-size: 25px;
   font-weight: 500;
@@ -148,12 +137,10 @@ const sortTasks = () => {
   justify-content: center;
   margin-top: 20px;
 }
-
 label{
     display: flex;
     align-items: center;
 }
-
 #descriptionForm{
   min-width: 500px;
   max-height: 50px;
@@ -163,7 +150,6 @@ label{
   padding: 12px 10px;
   font-family: 'Montserrat', sans-serif;
 }
-
 .switch_buttons {
     height: auto;
     margin: 0;
@@ -183,24 +169,18 @@ label{
     text-decoration: none;
     cursor: pointer;
 }
-
 .router-link-active{
     color: rgb(0, 0, 0);
     border: 2px solid rgb(202, 202, 202, 0.3);
     border-bottom: none;
     background-color: rgba(214, 214, 214, 0.712);
 }
-
-
 .tasks-button:hover{
     color: rgb(0, 0, 0);
     border: 2px solid rgb(202, 202, 202, 0.3);
     border-bottom: none;
     background-color: rgba(214, 214, 214, 0.712);
 }
-
-
-
 @media (max-width: 787px){
     .top_row{
         display: grid;
@@ -213,5 +193,4 @@ label{
         min-width: 200px;
     }
 }
-
 </style>
