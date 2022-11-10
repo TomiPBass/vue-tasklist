@@ -27,12 +27,12 @@
   box-shadow: 2px 0px 20px rgb(202, 202, 202);
   background-color: #acacac;
 }
-.add_task_button:hover{
+.add_task_button:hover:enabled{
   color: black;
   border: 2px solid rgb(255, 255, 255);
   background-color: rgb(182, 182, 182);
 }
-.add_task_button:active{
+.add_task_button:active:enabled{
   color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
   background-color: rgb(0, 0, 0);

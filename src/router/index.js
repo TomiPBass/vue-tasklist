@@ -5,7 +5,12 @@ import ViewLineTaskList from '@/views/ViewLineTaskList.vue'
 const routes = [
     {
         path: '/',
+        redirect: '/box',
         name: 'tasks',
+    },
+    {
+        path: '/box',
+        name: 'box-tasks',
         component: ViewBoxTaskList
     },
     {
